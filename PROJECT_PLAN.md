@@ -15,14 +15,14 @@ Platform ini bertujuan untuk menjadi jembatan antara **Konten Kreator** dan **Pr
 
 Kita akan menggunakan arsitektur **Monorepo** untuk mengelola beberapa aplikasi Next.js dalam satu basis kode. Ini memberikan pemisahan yang jelas antar layanan sambil memungkinkan berbagi kode (komponen UI, utilitas) untuk konsistensi.
 
-*   **Struktur:** Monorepo dengan `pnpm workspaces`.
+*   **Struktur:** Monorepo dengan `npm workspaces`.
 *   **Aplikasi (Subdomain):**
     *   `monetizr.com`: Aplikasi **Landing Page** (`apps/landing`).
     *   `auth.monetizr.com`: Aplikasi **Otentikasi** (`apps/auth`).
     *   `dashboard.monetizr.com`: **Dashboard** untuk Kreator & Promotor (`apps/dashboard`).
     *   `admin.monetizr.com`: **Panel Admin** (`apps/admin`).
 *   **Kode Bersama:**
-    *   `packages/ui`: Komponen React (shadcn/ui).
+    *   `packages/ui`: Komponen React, diinisialisasi dengan **shadcn/ui**.
     *   `packages/config`: Konfigurasi bersama (ESLint, TypeScript).
     *   `packages/db`: Skema dan klien database.
 *   **Teknologi Inti:**
@@ -129,8 +129,8 @@ graph TD
 
 | Fase                      | Durasi (Estimasi) | Fokus Utama                                                              | Checklist                                                                                                     |
 | ------------------------- | ----------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
-| **Fase 1: Fondasi Monorepo** | 1-2 Minggu        | Setup struktur proyek, aplikasi, dan package bersama.                    | `[ ]` Setup pnpm workspace <br> `[ ]` Buat 4 aplikasi Next.js <br> `[ ]` Konfigurasi shared `eslint` & `tsconfig` |
-| **Fase 2: Otentikasi & User** | 2-3 Minggu        | Mengintegrasikan `auth.monetizr.com` dan profil dasar di `dashboard`.      | `[ ]` Integrasi BetterAuth <br> `[ ]` Buat halaman login & daftar <br> `[ ]` Buat halaman profil pengguna     |
+| **Fase 1: Fondasi Monorepo** | 1-2 Minggu        | Setup struktur proyek, aplikasi, dan package bersama.                    | `[x]` Setup npm workspace <br> `[x]` Buat 4 aplikasi Next.js <br> `[x]` Konfigurasi shared `eslint` & `tsconfig` <br> `[x]` Inisialisasi `packages/ui` dengan shadcn/ui <br> `[x]` Inisialisasi `packages/db` |
+| **Fase 2: Otentikasi & User** | 2-3 Minggu        | Mengintegrasikan `auth.monetizr.com` dan profil dasar di `dashboard`.      | `[ ]` Integrasi BetterAuth <br> `[x]` Buat halaman login & daftar (UI) <br> `[ ]` Buat halaman profil pengguna     |
 | **Fase 3: Alur Inti Kampanye** | 3-4 Minggu        | Membangun alur dari pembuatan kampanye hingga promosi.                   | `[ ]` Buat alur kampanye <br> `[ ]` Implementasi tracking link <br> `[ ]` Dashboard dasar untuk Kreator/Promotor |
 | **Fase 4: Monetisasi**      | 2-3 Minggu        | Mengintegrasikan pembayaran dan penarikan dana.                          | `[ ]` Integrasi Midtrans (Deposit & Payout) <br> `[ ]` Sistem dompet & riwayat transaksi                     |
 | **Fase 5: Panel Admin**       | 1-2 Minggu        | Membangun fitur dasar untuk `admin.monetizr.com`.                        | `[ ]` Login admin <br> `[ ]` Manajemen user & kampanye <br> `[ ]` Dashboard keuangan admin                  |

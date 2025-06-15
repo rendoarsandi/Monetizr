@@ -1,8 +1,9 @@
+import AuthForm from '../components/AuthForm';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      <h1 className="text-4xl font-bold">auth.monetizr.com</h1>
-      <p>Authentication Page</p>
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-50">
+      <AuthForm />
     </main>
   );
 }

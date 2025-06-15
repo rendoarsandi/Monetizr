@@ -14,8 +14,8 @@
     "next": "15.3.3"
   },
   "devDependencies": {
-    "eslint-config-custom": "*",
-    "tsconfig": "*",
+    "@monetizr/config": "0.1.0",
+    "tsconfig": "0.1.0",
     "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^19",
