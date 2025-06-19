@@ -6,14 +6,26 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run dev --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
-    "start": "npm run start --workspaces --if-present"
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run build:admin && bun run build:auth && bun run build:dashboard && bun run build:landing",
+    "build:admin": "cd apps/admin && bun run build",
+    "build:auth": "cd apps/auth && bun run build",
+    "build:dashboard": "cd apps/dashboard && bun run build",
+    "build:landing": "cd apps/landing && bun run build",
+    "start": "bun run --filter '*' start"
   },
   "devDependencies": {
-    "typescript": "^5.4.5"
+    "@cloudflare/workers-types": "^4.20250619.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.0",
+    "typescript": "^5.4.5",
+    "wrangler": "^4.20.3"
   },
   "engines": {
     "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "lightningcss-win32-x64-msvc": "^1.30.1"
   }
 }

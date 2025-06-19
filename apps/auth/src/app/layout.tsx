@@ -1,5 +1,5 @@
 import React from 'react';
-import "packages/ui/globals.css";
+import "@monetizr/ui/globals.css";
 
 export default function AuthLayout({
   children,

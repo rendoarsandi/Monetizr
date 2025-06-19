@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import "packages/ui/globals.css";
+import "@monetizr/ui/globals.css";
 import { Sidebar } from '../components/sidebar';
 import { DashboardHeader } from '../components/header';
 import { useUiStore } from '../store/use-ui-store';

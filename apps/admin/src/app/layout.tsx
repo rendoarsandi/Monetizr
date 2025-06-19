@@ -1,4 +1,4 @@
-import "packages/ui/globals.css";
+import "@monetizr/ui/globals.css";
 import React from 'react';
 
 // Ini adalah layout dasar untuk panel admin.

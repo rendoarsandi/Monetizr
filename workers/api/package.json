@@ -1,0 +1,22 @@
+{
+  "name": "monetizr-api-worker",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "deploy:production": "wrangler deploy --env production",
+    "tail": "wrangler tail",
+    "types": "wrangler types"
+  },
+  "dependencies": {
+    "hono": "^4.6.11",
+    "bcryptjs": "^2.4.3"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250619.0",
+    "@types/bcryptjs": "^2.4.6",
+    "wrangler": "^4.20.3",
+    "typescript": "^5.4.5"
+  }
+}

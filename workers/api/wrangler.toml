@@ -1,0 +1,33 @@
+name = "monetizr-api"
+main = "src/index.ts"
+compatibility_date = "2024-12-19"
+compatibility_flags = ["nodejs_compat"]
+
+[env.production]
+name = "monetizr-api"
+account_id = "f64759bf49d0b0dbad173519b611f80c"
+
+[env.development]
+name = "monetizr-api-dev"
+account_id = "f64759bf49d0b0dbad173519b611f80c"
+
+# D1 Database binding
+[[d1_databases]]
+binding = "DB"
+database_name = "monetizr-db-dev"
+database_id = "21cbd266-ef7d-4a84-a81e-ddafda7e705c"
+
+# Environment variables
+[vars]
+JWT_SECRET = "your-jwt-secret-key-here"
+CORS_ORIGINS = "*.pages.dev,localhost:3000"
+
+# KV namespace for sessions (optional)
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "3919ed7608314b3c972a1535bef5c0bf"
+
+# R2 bucket for file storage (commented out for initial deployment)
+# [[r2_buckets]]
+# binding = "STORAGE"
+# bucket_name = "monetizr-storage"
