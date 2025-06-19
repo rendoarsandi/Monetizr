@@ -1,0 +1,44 @@
+{
+  "mcpServers": {
+    "cloudflare-docs": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://docs.mcp.cloudflare.com/sse"],
+      "description": "Get up to date reference information on Cloudflare services and APIs"
+    },
+    "cloudflare-workers-bindings": {
+      "command": "npx", 
+      "args": ["mcp-remote", "https://bindings.mcp.cloudflare.com/sse"],
+      "description": "Build Workers applications with storage, AI, and compute primitives - perfect for Monetizr backend"
+    },
+    "cloudflare-workers-builds": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://builds.mcp.cloudflare.com/sse"], 
+      "description": "Get insights and manage your Cloudflare Workers Builds for deployment"
+    },
+    "cloudflare-observability": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://observability.mcp.cloudflare.com/sse"],
+      "description": "Debug and get insight into your application's logs and analytics"
+    },
+    "cloudflare-radar": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://radar.mcp.cloudflare.com/sse"],
+      "description": "Get global Internet traffic insights, trends, URL scans, and other utilities"
+    },
+    "cloudflare-browser-rendering": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://browser.mcp.cloudflare.com/sse"],
+      "description": "Fetch web pages, convert them to markdown and take screenshots - useful for campaign material processing"
+    },
+    "cloudflare-ai-gateway": {
+      "command": "npx", 
+      "args": ["mcp-remote", "https://ai-gateway.mcp.cloudflare.com/sse"],
+      "description": "Search your logs, get details about AI prompts and responses"
+    },
+    "cloudflare-graphql": {
+      "command": "npx",
+      "args": ["mcp-remote", "https://graphql.mcp.cloudflare.com/sse"],
+      "description": "Get analytics data using Cloudflare's GraphQL API for campaign performance tracking"
+    }
+  }
+}
